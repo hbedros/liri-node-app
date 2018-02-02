@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "request": "^2.83.0"
+    "dotenv": "^5.0.0",
+    "request": "^2.83.0",
+    "twitter": "^1.7.1"
   },
   "devDependencies": {},
   "scripts": {
