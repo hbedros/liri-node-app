@@ -1,14 +1,17 @@
 require("dotenv").config();
 var getTweets = require('./twitter');
 
-//get the users input from the command line
-var userInput = process.argv[2];
 
-//save that to a var
+var userCommand = process.argv[2];
+var userQuery =  process.argv[3];
 
-//if that var === my-tweets we call getTweets()
-if (userInput === 'my-tweets') {
+//twitter call back
+if (userCommand === 'my-tweets') {
     getTweets();
+} 
+
+//omdb call back
+else if (userCommand === 'movie-this'){
+    var omdb = require('./omdb');
+    omdb.searchMovie(userQuery);
 }
-
-

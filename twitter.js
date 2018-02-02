@@ -13,7 +13,7 @@ var client = new Twitter({
 });
 
 var getTweets = function(){
-    var params = {screen_name: 'LIRI_HB'};
+    var params = {screen_name: 'LIRI_HB', count: 20};
     client.get('statuses/user_timeline', params, function(error, tweets, response) {
     if (error) {
     console.log(error);
