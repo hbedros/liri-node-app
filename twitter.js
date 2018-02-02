@@ -1,8 +1,3 @@
-console.log(process.env.TWITTER_CONSUMER_KEY);
-console.log(process.env.TWITTER_CONSUMER_SECRET);
-console.log(process.env.TWITTER_ACCESS_TOKEN_KEY);
-console.log(process.env.TWITTER_ACCESS_TOKEN_SECRET);
-
 var Twitter = require('twitter');
  
 var client = new Twitter({
