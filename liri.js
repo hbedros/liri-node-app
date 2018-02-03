@@ -1,6 +1,7 @@
 require("dotenv").config();
 var getTweets = require('./twitter');
 var getSpotify = require('./spotify');
+var fs = require('fs');
 
 
 var userCommand = process.argv[2];
@@ -18,6 +19,24 @@ else if (userCommand === 'movie-this'){
 }
 
 //spotify call back
-else if ( userCommand === 'spotify'){
+else if (userCommand === 'spotify-this-song'){
     getSpotify(userQuery);
+}
+
+//txt call back
+else if (userCommand === 'do-what-it-says'){
+
+    function read(file, callback) {
+        fs.readFile(file, 'utf8', function(err, data) {
+            if (err) {
+                console.log(err);
+            }else {
+                getSpotify(data);
+            }
+        });
+    }
+    
+    var output = read('random.txt', function(data) {
+        console.log(data);
+    });
 }
