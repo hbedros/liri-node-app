@@ -8,7 +8,7 @@ request("http://www.omdbapi.com/?t=" + movieTitle + "&y=&plot=short&apikey=trilo
         return console.log(error);
     }
     if (!error && response.statusCode === 200){
-        console.log('')
+        console.log('\n');
         console.log("Title: " + JSON.parse(body).Title);
         console.log("Year the movie came out: " + JSON.parse(body).Year);
         console.log("IMDB Rating of the movie: " + JSON.parse(body).imdbRating);
@@ -20,8 +20,6 @@ request("http://www.omdbapi.com/?t=" + movieTitle + "&y=&plot=short&apikey=trilo
         console.log("Language of the movie: " + JSON.parse(body).Language);
         console.log("Plot of the movie: " + JSON.parse(body).Plot);
         console.log("Actors in the movie: "+ JSON.parse(body).Actors + " ,");
-        console.log('___________________________________________');
-        // console.log(body);
     }
 });
 };

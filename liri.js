@@ -1,5 +1,6 @@
 require("dotenv").config();
 var getTweets = require('./twitter');
+var getSpotify = require('./spotify');
 
 
 var userCommand = process.argv[2];
@@ -14,4 +15,9 @@ if (userCommand === 'my-tweets') {
 else if (userCommand === 'movie-this'){
     var omdb = require('./omdb');
     omdb.searchMovie(userQuery);
+}
+
+//spotify call back
+else if ( userCommand === 'spotify'){
+    getSpotify(userQuery);
 }

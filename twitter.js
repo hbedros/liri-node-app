@@ -14,10 +14,11 @@ var getTweets = function(){
     console.log(error);
   } else {
     for (var i = 0; i < tweets.length; i++) {
-        console.log(" ");
-        console.log(tweets[i].created_at);
-        console.log(tweets[i].text);
-        console.log("___________________________________________");
+      console.log('\n');
+      console.log('(' + (i + 1) + ')');
+      console.log(tweets[i].created_at);
+      console.log(tweets[i].text);
+      console.log('___________________________________________');
     }
   }
 });
